@@ -1,0 +1,35 @@
+#!/bin/sh
+
+red='\e[1;31m'
+mag='\e[1;35m'
+end='\e[0m'
+bld='\e[1m'
+dim='\e[2m'
+
+printf "install dotfiles? ${bld}[y/n]${end} ${red}>>${end} "
+
+while true; do
+  read yn
+  case $yn in
+    [Yy]*) break ;;
+    [Nn]*) exit ;;
+    *) printf "${bld}[y/n]${end} ${red}>>${end} " ;;
+  esac
+done
+
+if test ! $(which brew); then
+  printf "installing homebrew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+source './scripts/brew.sh'
+
+source './scripts/brew-cask.sh'
+
+for pkg in `ls src`; do
+  (cd src && stow --target=$HOME $pkg)
+  printf "${dim}[link]${end} $pkg\n"
+done
+
+printf "${mag}[done]${end} 🍙"
+
