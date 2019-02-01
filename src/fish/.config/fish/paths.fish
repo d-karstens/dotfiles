@@ -1,10 +1,11 @@
 # brew
-set -g fish_user_paths $fish_user_paths '/usr/local/sbin'
+set PATH $PATH '/usr/local/sbin'
+set PATH "/usr/local/sbin" $PATH
 
 # yarn
-set -g fish_user_paths $fish_user_paths "(yarn global bin)/node_modules/.bin"
+set PATH $PATH "(yarn global bin)/node_modules/.bin"
 
 # android studio
 set -x ANDROID_HOME $HOME/Library/Android/sdk
-set -g fish_user_paths $fish_user_paths $ANDROID_HOME/tools
-set -g fish_user_paths $fish_user_paths $ANDROID_HOME/platform-tools
+set PATH $PATH $ANDROID_HOME/tools
+set PATH $PATH $ANDROID_HOME/platform-tools
