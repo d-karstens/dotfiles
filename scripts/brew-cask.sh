@@ -3,12 +3,13 @@
 brew tap caskroom/versions
 brew tap caskroom/fonts
 
+brew cask install 1password
 brew cask install firefox
-brew cask install font-source-code-pro
-brew cask install fontforge
-brew cask install iterm2-beta
-brew cask install karabiner-elements
-brew cask install mpv
-brew cask install spectacle
+brew cask install alt-tab
+brew cask install discord
+brew cask install font-fira-code
+brew cask install iterm2
+brew cask install rectangle
+brew cask install slack
 brew cask install spotify
-brew cask install sublime-text
+brew cask install visual-studio-code

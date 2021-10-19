@@ -36,12 +36,14 @@ brew install composer
 brew install direnv
 brew install fish
 brew install fisherman
-brew install fontforge
+brew install fnm
 brew install fzf
+brew install gh
 brew install git
-brew install less
+brew install nitro
 brew install node
 brew install openssh
+brew install php
 brew install python
 brew install rbenv
 brew install ripgrep
